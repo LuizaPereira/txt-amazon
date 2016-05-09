@@ -24,4 +24,12 @@ public class User {
     public void setProfileName(String profileName) {
         this.profileName = profileName;
     }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "userId='" + userId + '\'' +
+                ", profileName='" + profileName + '\'' +
+                '}';
+    }
 }

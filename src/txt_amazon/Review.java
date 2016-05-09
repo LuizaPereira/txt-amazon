@@ -1,25 +1,50 @@
 package txt_amazon;
 
 public class Review {
-    public double score;
-    public long time;
-    public String summary;
-    public String text;
+    public User user;
+    public Product product;
+    public Helpfulness helpfulness;
+    private double score;
+    private long time;
+    private String summary;
+    private String text;
 
-    public Review(double score, long time, String summary, String text) {
+    public Review(User user, Product product, Helpfulness helpfulness, double score, long time, String summary, String text) {
         this.score = score;
         this.time = time;
         this.summary = summary;
         this.text = text;
+        this.user = user;
+        this.product = product;
+        this.helpfulness = helpfulness;
+    }
+    public User getUser() {
+        return user;
     }
 
-    public double getScore() {
-        return score;
+    public void setUser(User user) {
+        this.user = user;
     }
 
-    public void setScore(double score) {
-        this.score = score;
+    public Product getProduct() {
+        return product;
     }
+
+    public void setProduct(Product product) {
+        this.product = product;
+    }
+
+    public Helpfulness getHelpfulness() {
+        return helpfulness;
+    }
+
+    public void setHelpfulness(Helpfulness helpfulness) {
+        this.helpfulness = helpfulness;
+    }
+
+    public double getScore() { return score; }
+
+    public void setScore(double score) { this.score = score; }
 
     public long getTime() {
         return time;
@@ -43,5 +68,18 @@ public class Review {
 
     public void setText(String text) {
         this.text = text;
+    }
+
+    @Override
+    public String toString() {
+        return "Review{" +
+                "user=" + user +
+                ", product=" + product +
+                ", helpfulness=" + helpfulness +
+                ", score=" + score +
+                ", time=" + time +
+                ", summary='" + summary + '\'' +
+                ", text='" + text + '\'' +
+                '}';
     }
 }

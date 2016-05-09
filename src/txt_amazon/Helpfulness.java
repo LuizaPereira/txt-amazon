@@ -1,8 +1,8 @@
 package txt_amazon;
 
 public class Helpfulness {
-    private int positive;
-    private int total;
+    public int positive;
+    public int total;
 
     public Helpfulness(int positive, int total) {
         this.positive = positive;
@@ -23,13 +23,5 @@ public class Helpfulness {
 
     public void setTotal(int total) {
         this.total = total;
-    }
-
-    @Override
-    public String toString() {
-        return "Helpfulness{" +
-                "positive=" + positive +
-                ", total=" + total +
-                '}';
     }
 }

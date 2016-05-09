@@ -3,10 +3,10 @@ package txt_amazon;
 public class Product {
     public String productId;
     public String title;
-    public String price;
+    public double price;
     public static double UNKOWN_PRICE = -1;
 
-    public Product(String productId, String title, String price) {
+    public Product(String productId, String title, double price) {
         this.productId = productId;
         this.title = title;
         this.price = price;
@@ -28,21 +28,12 @@ public class Product {
         this.title = title;
     }
 
-    public String getPrice() {
+    public double getPrice() {
         return price;
     }
 
-    public void setPrice(String price) {
+    public void setPrice(double price) {
         this.price = price;
-    }
-
-    @Override
-    public String toString() {
-        return "Product{" +
-                "productId='" + productId + '\'' +
-                ", title='" + title + '\'' +
-                ", price='" + price + '\'' +
-                '}';
     }
 }
 

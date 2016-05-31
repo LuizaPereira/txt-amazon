@@ -1,12 +1,15 @@
 package txt_amazon;
 
-public class Product {
-    public String productId;
-    public String title;
-    public String price;
-    public static double UNKOWN_PRICE = -1;
+import java.util.ArrayList;
 
-    public Product(String productId, String title, String price) {
+public class Product {
+    private String productId;
+    private String title;
+    private Double price;
+    static double UNKNOWN_PRICE = -1;
+    private ArrayList<Review> reviews = new ArrayList<>();
+
+    public Product(String productId, String title, Double price) {
         this.productId = productId;
         this.title = title;
         this.price = price;
@@ -28,12 +31,20 @@ public class Product {
         this.title = title;
     }
 
-    public String getPrice() {
+    public Double getPrice() {
         return price;
     }
 
-    public void setPrice(String price) {
+    public void setPrice(Double price) {
         this.price = price;
+    }
+
+    public void novaReview(Review review){
+        this.reviews.add(review);
+    }
+
+    public ArrayList<Review> getReviews(){
+        return this.reviews;
     }
 
     @Override
